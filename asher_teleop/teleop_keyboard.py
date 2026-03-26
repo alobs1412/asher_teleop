@@ -56,7 +56,7 @@ def main():
 				x,y,z = keys[key]
 				msg.linear.x = x*linear_speed
 				msg.linear.y = y*linear_speed
-				msg.linear.z = z*angular_speed
+				msg.angular.z = z*angular_speed
 			pub.publish(msg)
 	finally:
 		pub.publish(Twist())
